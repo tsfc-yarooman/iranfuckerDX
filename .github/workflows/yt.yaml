@@ -271,9 +271,7 @@ jobs:
           git pull --rebase origin "$BRANCH" || true
           git push origin HEAD:"$BRANCH" || git push --force-with-lease origin HEAD:"$BRANCH"
 
-          echo "🎉 All $TOTAL files pushed — AVASAM (https://avasam.ir)"oads)" ]; then
-            git add downloads/
-            git commit -m "[AVASAM] Downloaded content [skip ci]" || echo "No changes"
+          echo "🎉 All $TOTAL files pushed — AVASAM (https://avasam.ir)"m "[AVASAM] Downloaded content [skip ci]" || echo "No changes"
             git pull --rebase origin ${GITHUB_REF_NAME} || true
             git push origin HEAD:${GITHUB_REF_NAME} --force-with-lease
             echo "✅ Pushed to repository"
